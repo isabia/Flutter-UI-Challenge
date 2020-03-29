@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_chellenge/src/deals/best_deals.widget.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -165,7 +166,7 @@ class HomePage extends StatelessWidget {
                 ),
                 Expanded(
                   child: Container(
-                    height: 400,
+                    height: 360,
                     child: ListView.builder(
                       padding: EdgeInsets.symmetric(horizontal: 20),
                       itemCount: 5,
@@ -262,6 +263,7 @@ class HomePage extends StatelessWidget {
               ],
             ),
           ),
+          BestDeals(),
         ],
       ),
     );
