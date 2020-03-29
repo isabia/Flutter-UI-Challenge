@@ -30,7 +30,7 @@ class HomePage extends StatelessWidget {
                 child: Text("Perfume",
                     textAlign: TextAlign.left,
                     style:
-                        TextStyle(fontWeight: FontWeight.bold, fontSize: 40.0)),
+                        TextStyle(fontWeight: FontWeight.bold, fontSize: 36.0)),
               ),
             ],
           ),
@@ -104,6 +104,52 @@ class HomePage extends StatelessWidget {
                 ),
               ),
             ],
+          ),
+          SizedBox(height: 30),
+          RotatedBox(
+            quarterTurns: 15,
+            child: Column(
+              children: <Widget>[
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    'SUGGESTED',
+                    style: TextStyle(
+                      color: Color(0xFF59A05E),
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ),
+                SizedBox(height: 5),
+                CircleAvatar(
+                  backgroundColor: Color(0xFF59A05E),
+                  radius: 2,
+                ),
+              ],
+            ),
+          ),
+          SizedBox(height: 30),
+          RotatedBox(
+            quarterTurns: 3,
+            child: Column(
+              children: <Widget>[
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    'POPULAR',
+                    style: TextStyle(
+                      color: Colors.grey,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 5),
+                CircleAvatar(
+                  backgroundColor: Colors.grey,
+                  radius: 2,
+                )
+              ],
+            ),
           ),
         ],
       ),
