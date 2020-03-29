@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_chellenge/src/deals/best_deals.widget.dart';
+import 'package:flutter_chellenge/src/details/details_page.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -177,7 +178,7 @@ class HomePage extends StatelessWidget {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => Text("Details page"),
+                              builder: (context) => DetailPage(),
                             ),
                           );
                         },
@@ -220,7 +221,7 @@ class HomePage extends StatelessWidget {
                                 ),
                                 const SizedBox(height: 5),
                                 Text(
-                                  '\$ 44.00',
+                                  '\$ 89.00',
                                   style: TextStyle(
                                     color: Color(0xff7CB25C),
                                     fontWeight: FontWeight.w700,

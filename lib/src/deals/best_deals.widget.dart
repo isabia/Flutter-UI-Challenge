@@ -83,7 +83,7 @@ class BestDeals extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       Text(
-                        'My Burberry Black',
+                        'Coco Noir',
                         style: TextStyle(fontWeight: FontWeight.w700),
                       ),
                       const SizedBox(height: 5),
