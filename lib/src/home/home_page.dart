@@ -114,54 +114,58 @@ class HomePage extends StatelessWidget {
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                RotatedBox(
-                  quarterTurns: 15,
-                  child: Column(
-                    children: <Widget>[
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text(
-                          'SUGGESTED',
-                          style: TextStyle(
-                            color: Color(0xFF59A05E),
-                            fontWeight: FontWeight.w500,
+                Column(
+                  children: <Widget>[
+                    RotatedBox(
+                      quarterTurns: 15,
+                      child: Column(
+                        children: <Widget>[
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text(
+                              'SUGGESTED',
+                              style: TextStyle(
+                                color: Color(0xFF59A05E),
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      SizedBox(height: 5),
-                      CircleAvatar(
-                        backgroundColor: Color(0xFF59A05E),
-                        radius: 2,
-                      ),
-                    ],
-                  ),
-                ),
-                SizedBox(height: 20),
-                RotatedBox(
-                  quarterTurns: 3,
-                  child: Column(
-                    children: <Widget>[
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text(
-                          'POPULAR',
-                          style: TextStyle(
-                            color: Colors.grey,
-                            fontWeight: FontWeight.bold,
+                          SizedBox(height: 5),
+                          CircleAvatar(
+                            backgroundColor: Color(0xFF59A05E),
+                            radius: 2,
                           ),
-                        ),
+                        ],
                       ),
-                      const SizedBox(height: 5),
-                      CircleAvatar(
-                        backgroundColor: Colors.grey,
-                        radius: 2,
-                      )
-                    ],
-                  ),
+                    ),
+                    SizedBox(height: 20),
+                    RotatedBox(
+                      quarterTurns: 3,
+                      child: Column(
+                        children: <Widget>[
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text(
+                              'POPULAR',
+                              style: TextStyle(
+                                color: Colors.grey,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                          const SizedBox(height: 5),
+                          CircleAvatar(
+                            backgroundColor: Colors.grey,
+                            radius: 2,
+                          )
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
                 Expanded(
                   child: Container(
-                    height: 300,
+                    height: 400,
                     child: ListView.builder(
                       padding: EdgeInsets.symmetric(horizontal: 20),
                       itemCount: 5,
@@ -185,6 +189,7 @@ class HomePage extends StatelessWidget {
                                   alignment: Alignment.center,
                                   margin: EdgeInsets.only(right: 15),
                                   width: 140,
+                                  height: 240,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(12),
                                     gradient: LinearGradient(
