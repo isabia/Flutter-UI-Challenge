@@ -105,49 +105,155 @@ class HomePage extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(height: 30),
-          RotatedBox(
-            quarterTurns: 15,
-            child: Column(
-              children: <Widget>[
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(
-                    'SUGGESTED',
-                    style: TextStyle(
-                      color: Color(0xFF59A05E),
-                      fontWeight: FontWeight.w500,
-                    ),
-                  ),
-                ),
-                SizedBox(height: 5),
-                CircleAvatar(
-                  backgroundColor: Color(0xFF59A05E),
-                  radius: 2,
-                ),
-              ],
+          Container(
+            padding: const EdgeInsets.only(
+              left: 20.0,
+              top: 30.0,
+              bottom: 20.0,
             ),
-          ),
-          SizedBox(height: 30),
-          RotatedBox(
-            quarterTurns: 3,
-            child: Column(
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(
-                    'POPULAR',
-                    style: TextStyle(
-                      color: Colors.grey,
-                      fontWeight: FontWeight.bold,
+                RotatedBox(
+                  quarterTurns: 15,
+                  child: Column(
+                    children: <Widget>[
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(
+                          'SUGGESTED',
+                          style: TextStyle(
+                            color: Color(0xFF59A05E),
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                      ),
+                      SizedBox(height: 5),
+                      CircleAvatar(
+                        backgroundColor: Color(0xFF59A05E),
+                        radius: 2,
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(height: 20),
+                RotatedBox(
+                  quarterTurns: 3,
+                  child: Column(
+                    children: <Widget>[
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(
+                          'POPULAR',
+                          style: TextStyle(
+                            color: Colors.grey,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(height: 5),
+                      CircleAvatar(
+                        backgroundColor: Colors.grey,
+                        radius: 2,
+                      )
+                    ],
+                  ),
+                ),
+                Expanded(
+                  child: Container(
+                    height: 300,
+                    child: ListView.builder(
+                      padding: EdgeInsets.symmetric(horizontal: 20),
+                      itemCount: 5,
+                      shrinkWrap: true,
+                      scrollDirection: Axis.horizontal,
+                      itemBuilder: (context, index) => GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => Text("Details page"),
+                            ),
+                          );
+                        },
+                        child: Stack(
+                          children: <Widget>[
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Container(
+                                  alignment: Alignment.center,
+                                  margin: EdgeInsets.only(right: 15),
+                                  width: 140,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(12),
+                                    gradient: LinearGradient(
+                                      begin: Alignment.topCenter,
+                                      end: Alignment.bottomCenter,
+                                      stops: [0.5, 1],
+                                      colors: [
+                                        Color(0xff7CB25C),
+                                        Color(0xff458F52),
+                                      ],
+                                    ),
+                                  ),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(30.0),
+                                    child: Image.network(
+                                      'https://shopping.tallink.com/images/prod/B/E/2/2/BE22720F-B613-4826-AD0B-F715DF1E44EE_1_big.png',
+                                    ),
+                                  ),
+                                ),
+                                const SizedBox(height: 10),
+                                Text(
+                                  'Chanel Coco Noir',
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                                ),
+                                const SizedBox(height: 5),
+                                Text(
+                                  '\$ 44.00',
+                                  style: TextStyle(
+                                    color: Color(0xff7CB25C),
+                                    fontWeight: FontWeight.w700,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            Positioned(
+                              top: 0,
+                              right: 0,
+                              child: Container(
+                                  margin: EdgeInsets.only(
+                                    bottom: 20,
+                                    right: 15,
+                                  ),
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.only(
+                                      bottomLeft: Radius.circular(13),
+                                      topRight: Radius.circular(12),
+                                    ),
+                                  ),
+                                  padding: EdgeInsets.only(
+                                    top: 10,
+                                    bottom: 10,
+                                  ),
+                                  width: 45,
+                                  child: Icon(
+                                    Icons.favorite,
+                                    color: Colors.black,
+                                    size: 20,
+                                  )),
+                            ),
+                          ],
+                        ),
+                      ),
                     ),
                   ),
                 ),
-                const SizedBox(height: 5),
-                CircleAvatar(
-                  backgroundColor: Colors.grey,
-                  radius: 2,
-                )
               ],
             ),
           ),
